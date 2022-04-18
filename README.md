@@ -1,2 +1,2 @@
-# imcrobitMorev2-with-Radio.github.io
+# microbitMorev2-with-Radio.github.io
 Extendable Scratch3 Programming Environment
