@@ -41,7 +41,6 @@ jobs:
       - run: cp ./microbitMorev2-with-Radio.github.io/editor/favicon.ico ./scratch-gui/build/static/favicon.ico
       - run: mv -T ./microbitMorev2-with-Radio.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
-      - run: mv -T ./mbit-more-v2-with-radio ./public/dist
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
