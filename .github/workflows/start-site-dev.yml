@@ -42,6 +42,7 @@ jobs:
       - run: mv -T ./xcratch.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2-with-radio ./public/dist
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
