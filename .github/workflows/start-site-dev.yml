@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository:xcratch/scratch-gui
+          repository: xcratch/scratch-gui
           ref: xcratch
           path: ./scratch-gui
       - run: npm install --save --legacy-peer-deps
