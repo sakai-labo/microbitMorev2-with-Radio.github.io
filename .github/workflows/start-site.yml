@@ -20,7 +20,7 @@ jobs:
           repository: xcratch/scratch-gui
           ref: xcratch
           path: ./scratch-gui
-      - run: npm install
+      - run: npm install --save --legacy-peer-deps
         working-directory: ./scratch-gui
       - run: npm install https://github.com/xcratch/scratch-vm.git#xcratch
         working-directory: ./scratch-gui
