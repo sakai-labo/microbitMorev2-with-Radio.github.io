@@ -17,33 +17,31 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: xcratch/scratch-gui
+          repository: https://github.com/xcratch/scratch-gui
           ref: xcratch
           path: ./scratch-gui
       - run: npm install --save --legacy-peer-deps
         working-directory: ./scratch-gui
-      - run: npm install https://github.com/xcratch/scratch-vm.git#xcratch
-        working-directory: ./scratch-gui
       - uses: actions/checkout@v2
         with:
-          repository: xcratch/xcratch.github.io
+          repository: https://github.com/sakai-labo/mbit-more-v2-with-radio
+          ref: master
+          path: ./mbit-more-v2-with-radio
+      - uses: actions/checkout@v2
+        with:
+          repository: https://github.com/sakai-labo/microbitMorev2-with-Radio.github.io
           ref: main
-          path: ./xcratch.github.io
+          path: ./microbitMorev2-with-Radio.github.io
       - run: node ./scripts/replace-logo.js ../scratch-gui
-        working-directory: ./xcratch.github.io
+        working-directory: ./microbitMorev2-with-Radio.github.io
       - run: node ./scripts/original-assets.js ../scratch-gui
-        working-directory: ./xcratch.github.io
+        working-directory: ./microbitMorev2-with-Radio.github.io
       - run: npm run build
         working-directory: ./scratch-gui
       - run: cp ./xcratch.github.io/editor/favicon.ico ./scratch-gui/build/static/favicon.ico
       - run: mv -T ./xcratch.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
-      - uses: actions/checkout@v2
-        with:
-          repository: xcratch/xcratch-doc
-          path: ./xcratch-doc
-      - run: mv -T ./xcratch-doc/docs ./public/docs
-      - uses: peaceiris/actions-gh-pages@v3
+      - run: mv -T ./mbit-more-v2-with-radio ./public/dist
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
