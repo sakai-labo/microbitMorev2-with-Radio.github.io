@@ -27,7 +27,7 @@ jobs:
           repository: https://github.com/sakai-labo/mbit-more-v2-with-radio
           ref: DISABLE-BLE-ENABLE-RADIO
           path: ./mbit-more-v2-with-radio
-          - run: npm run register
+      - run: npm run register
         working-directory: ./mbit-more-v2-with-radio
       - uses: actions/checkout@v2
         with:
