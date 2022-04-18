@@ -17,24 +17,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: https://github.com/xcratch/scratch-gui
+          repository:xcratch/scratch-gui
           ref: xcratch
           path: ./scratch-gui
       - run: npm install --save --legacy-peer-deps
         working-directory: ./scratch-gui
       - uses: actions/checkout@v2
         with:
-          repository: https://github.com/sakai-labo/mbit-more-v2-with-radio
-          ref: master
+          repository: sakai-labo/mbit-more-v2-with-radio
+          ref: DISABLE-BLE-ENABLE-RADIO
           path: ./mbit-more-v2-with-radio
+      - run: npm run register
+        working-directory: ./mbit-more-v2-with-radio
       - uses: actions/checkout@v2
         with:
-          repository: https://github.com/sakai-labo/microbitMorev2-with-Radio.github.io
+          repository: sakai-labo/microbitMorev2-with-Radio.github.io
           ref: main
           path: ./microbitMorev2-with-Radio.github.io
       - run: node ./scripts/replace-logo.js ../scratch-gui
-        working-directory: ./microbitMorev2-with-Radio.github.io
-      - run: node ./scripts/original-assets.js ../scratch-gui
         working-directory: ./microbitMorev2-with-Radio.github.io
       - run: npm run build
         working-directory: ./scratch-gui
@@ -42,6 +42,7 @@ jobs:
       - run: mv -T ./xcratch.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2-with-radio ./public/dist
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
