@@ -24,4 +24,5 @@ if (!renderGui.includes('xcratch')) {
     } catch (err) {
         console.error(err);
     }
-}
+};
+
