@@ -97,7 +97,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "a877fb1e9a4260e9c995abbbdb054920"
   }, {
     "url": "blocks-only.html",
-    "revision": "c3181250175f96bac4bea8d1060efee4"
+    "revision": "456dc2e67232139dc637ab74f7f6a31e"
   }, {
     "url": "chunks/blocksonly.js",
     "revision": "95531038cfa411c4a9204d64f40f04bf"
@@ -124,7 +124,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "b29852eae60ebb2d5390bdb279168b15"
   }, {
     "url": "compatibility-testing.html",
-    "revision": "6cef3280c490eccb8e11577d41f48e88"
+    "revision": "a83d14b88fa1a4247b0041a2665cfaca"
   }, {
     "url": "https://assets.scratch.mit.edu/internalapi/asset/0015433a406a53f00b792424b823268c.png/get/",
     "revision": "0015433a406a53f00b792424b823268c"
@@ -4120,7 +4120,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "ff8b8c3bf841a11fd5fe3afaa92be1b5"
   }, {
     "url": "index.html",
-    "revision": "75e1c7888af168864fc1aac07192bee0"
+    "revision": "842714a20f23376b9a938bba0f43f4b9"
   }, {
     "url": "lib.min.js",
     "revision": "e9c7d2442d6790c45276497f43058124"
@@ -4129,7 +4129,7 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "3bc082772d2fb6ce3a73d3f3e61b5577"
   }, {
     "url": "player.html",
-    "revision": "fcdcdff624cfe6c2645602cf449c46ca"
+    "revision": "537159692c78317c821043a04032afaa"
   }, {
     "url": "static/assets/0136d7b1618e6d7ecaf97717bd128a05.jpg",
     "revision": "0136d7b1618e6d7ecaf97717bd128a05"
@@ -4963,13 +4963,13 @@ define(['./workbox-36b4d269'], (function (workbox) { 'use strict';
     "revision": "15c01eb94658c32b995b97aea18aca08"
   }, {
     "url": "static/favicon.ico",
-    "revision": "e9b6a0a182aad756160d2301d2b0a374"
+    "revision": "ee4b8bb57227e152bba098639fd3c251"
   }, {
     "url": "static/pwa-icon.png",
-    "revision": "6a57c009a4747963c9f1ca6d9f4da140"
+    "revision": "5591b3745674689687cb7da55f8cfb79"
   }, {
     "url": "static/pwa-maskable_icon.png",
-    "revision": "578e75dc4330002a3bebd8dcf12836aa"
+    "revision": "65220c26b6725d362f407514ad615d0d"
   }], {});
 
 }));
