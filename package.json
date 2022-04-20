@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xcratch/xcratch.github.io.git"
+    "url": "git+https://github.com/sakai-labo/microbitMorev2-with-Radio.github.io"
   },
   "keywords": [
     "scratch",
-    "education"
+    "education",
+    "xcratch"
   ],
-  "author": "Koji Yokokawa",
+  "author": "Koji Yokokawa + sakai-labo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xcratch/xcratch.github.io/issues"
+    "url": "https://github.com/sakai-labo/microbitMorev2-with-Radio.github.io"
   },
-  "homepage": "https://github.com/xcratch/xcratch.github.io#readme",
+  "homepage": "https://sites.google.com/view/sakaicode-makecode/scratchxcratch%E9%96%A2%E9%80%A3/microbit-morev2-with-radio%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8",
   "devDependencies": {
     "eslint": "^7.9.0"
   },
