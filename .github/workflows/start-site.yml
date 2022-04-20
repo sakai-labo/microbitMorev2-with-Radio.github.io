@@ -36,11 +36,11 @@ jobs:
           path: ./microbitMorev2-with-Radio.github.io
       - run: node ./scripts/replace-logo.js ../scratch-gui
         working-directory: ./microbitMorev2-with-Radio.github.io
-      - run: npm run build
-        working-directory: ./scratch-gui
       - run: cp ./microbitMorev2-with-Radio.github.io/editor/favicon.ico ./scratch-gui/build/static/favicon.ico
       - run: cp ./microbitMorev2-with-Radio.github.io/editor/static/pwa-icon.png ./scratch-gui/build/static/pwa-icon.png
-      - run: cp ./microbitMorev2-with-Radio.github.io/editor/static/pwa-maskable_icon.png ./scratch-gui/build/static/pwa-maskable_icon.png.png
+      - run: cp ./microbitMorev2-with-Radio.github.io/editor/static/pwa-maskable_icon.png ./scratch-gui/build/static/pwa-maskable_icon.png
+      - run: npm run build
+        working-directory: ./scratch-gui
       - run: mv -T ./microbitMorev2-with-Radio.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2-with-radio/dist ./public/dist
