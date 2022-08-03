@@ -41,6 +41,8 @@ jobs:
       - run: cp ./microbitMorev2-with-Radio.github.io/editor/static/pwa-maskable_icon.png ./scratch-gui/static/pwa-maskable_icon.png
       - run: npm run build
         working-directory: ./scratch-gui
+      - run: cp ./microbitMorev2-with-Radio.github.io/scripts/index.html ./scratch-gui/build/index.html
+      - run: npm run build
       - run: mv -T ./microbitMorev2-with-Radio.github.io/public ./public
       - run: mv -T ./scratch-gui/build ./public/editor
       - run: mv -T ./mbit-more-v2-with-radio/dist ./public/dist

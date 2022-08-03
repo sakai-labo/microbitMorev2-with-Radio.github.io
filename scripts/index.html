@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" value="notranslate">
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <title>Mbit More v2 with Radio</title>
+    
+  <meta name="apple-mobile-web-app-title" content="Mbit More with radio" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="manifest" href="manifest.24fcc29e0ced94844a50878db22784f7.json" crossorigin="use-credentials" /></head>
+  <body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('./service-worker.js').then(function (registration) {
+            console.log('PWA worker registration successful', registration.scope);
+          }, function (err) {
+            console.log('PWA worker registration failed', err);
+          }).catch(function (err) {
+            console.log(err);
+          });
+        });
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+    </script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="NewAgent"
+      
+      agent-id="63944f71-3698-4b7d-a848-1b65bb6974f0"
+      language-code="ja"
+    ></df-messenger>
+    <script>const dfMessenger = document.querySelector('df-messenger');
+      dfMessenger.addEventListener('df-messenger-loaded', function () {
+          // Handle event
+          let dfIcon = dfMessenger?.shadowRoot?.querySelector("#widgetIcon");
+          if(dfIcon) {
+              dfIcon.style.bottom = "55px";
+              dfIcon.style.right = "200px";
+          }
+      });
+      </script>
+  <script type="text/javascript" src="lib.min.js"></script><script type="text/javascript" src="chunks/gui.js"></script></body>
+</html>
