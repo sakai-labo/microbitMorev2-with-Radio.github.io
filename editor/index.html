@@ -24,5 +24,23 @@
         console.log('Service Worker is not supported by browser.');
       }
     </script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="NewAgent"
+      
+      agent-id="63944f71-3698-4b7d-a848-1b65bb6974f0"
+      language-code="ja"
+    ></df-messenger>
+    <script>const dfMessenger = document.querySelector('df-messenger');
+      dfMessenger.addEventListener('df-messenger-loaded', function () {
+          // Handle event
+          let dfIcon = dfMessenger?.shadowRoot?.querySelector("#widgetIcon");
+          if(dfIcon) {
+              dfIcon.style.bottom = "55px";
+              dfIcon.style.right = "200px";
+          }
+      });
+      </script>
   <script type="text/javascript" src="lib.min.js"></script><script type="text/javascript" src="chunks/gui.js"></script></body>
 </html>
